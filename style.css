@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+a{
+    outline: none;
+}
+
+.icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+}
+
+
+.header{
+    display: flex;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 60%;
+}
+
+.brand{
+    animation-name: brand;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translateY(-300%);
+}
+
+@keyframes brand{
+    0% {transform: translateY(-300%);}
+    100% {transform: translateY(0);}
+}
+
+
+.brand a{
+    color: #4A4A4A;
+    text-decoration: none;
+    outline: none;
+    font-size: 38px;
+    letter-spacing: .6px;
+    font-weight: 700;
+    font-family: 'Maven Pro', sans-serif;
+    font-style: normal;
+}
+
+
+.links{
+    margin-left: auto;
+    animation-name: links;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translateX(300%);
+}
+
+@keyframes links{
+    0% {transform: translateX(300%);}
+    100% {transform: translateX(0);}
+}
+
+.links a{
+    padding-left: 20px;
+    padding-right: 20px;
+    color: rgba(74,74,74,.6);
+    text-decoration: none;
+}
+
+.links a:hover{
+    color: #4A4A4A;
+    transition: .4s;
+}
+
+.main{
+    display: flex;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+
+.content{
+    margin-right: 80px;
+    animation-name: content;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translateX(-300%);
+}
+
+@keyframes content{
+    0%{transform: translateX(-300%);}
+    100%{transform: translateX(0);}
+}
+
+.content h1{
+    font-size: 20px;
+    color: #4A4A4A;
+    letter-spacing: .6px;
+    font-weight: 700;
+    font-family: 'Maven Pro', sans-serif;
+    margin-bottom: 40px;
+}
+
+.content p{
+    letter-spacing: .45px;
+    line-height: 27px;
+    font-weight: 400;
+    font-family: 'Maven Pro', sans-serif;
+    color: #4A4A4A;
+    margin-bottom: 40px;
+}
+
+.content a{
+    background-color: #4A4A4A;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.tech {
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    /* position: absolute; */
+    z-index: 1;
+    transform: translateX(-200%);
+}
+
+.tech svg{
+    font-size: 30px;
+}
+
+.photo{
+    animation-name: photo;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    transform: translateX(300%);
+}
+
+@keyframes photo{
+    0% {transform: translateX(300%);}
+    100% {transform: translateX(0);}
+}
+
+
+.photo img{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    box-shadow: 1px 0 50px 0 rgba(0, 0, 0, .35);
+}
+
+.photo img:hover{
+    transform: translateY(-2px);
+    transition: all .2s;
+}
+
+.fe{
+    transform: translateX(0);
+    display: block;
+}
+
+.btnNew{
+    animation-name: btnNew;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes btnNew{
+    0% {
+        transform: translateX(0%);
+        display: block;
+    }
+
+    100% {
+        transform: translateX(40%);
+        opacity: 0;
+    }
+}
+
+
+.techNew{
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 2s;
+}
+
+
+@media (max-width: 768px) { 
+    .header{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav{
+        width: 100%;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .links{
+        margin-left: 0;
+    }
+    
+    .main{
+        overflow: hidden;
+        width: 90%;
+        padding-top: 80px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content{
+        margin-right: 0;
+    }
+
+    .content h1{
+        margin-bottom: 20px;
+    }
+
+    .content p{
+        margin-bottom: 20px;
+    }
+
+    .photo{
+        position: absolute;
+        top: 0;
+        margin-top: 135px;
+    }
+
+    .photo img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .fe{
+        display: flex;
+    }
+ }
